@@ -1,0 +1,67 @@
+body {
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.arrow-button-up {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.arrow-button-left {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.arrow-button-right {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.arrow-button-down {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.arrow-button:active {
+  transform: scale(0.95);
+}
+
+.arrow {
+  font-size: 48px;
+  color: red;
+}
