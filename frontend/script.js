@@ -1,4 +1,3 @@
-// Exemple de code pour afficher un message lors du clic
 document.querySelectorAll('.arrow-button-up').forEach(button => {
   button.addEventListener('click', () => {
     alert(`Vous avez cliqué sur la flèche ${button.textContent}`);
@@ -24,5 +23,12 @@ document.querySelectorAll('.arrow-button-down').forEach(button => {
   button.addEventListener('click', () => {
     alert(`Vous avez cliqué sur la flèche ${button.textContent}`);
     console.log('recule')
+  });
+});
+
+document.querySelectorAll('.button-stop').forEach(button => {
+  button.addEventListener('click', () => {
+    alert(`Vous avez cliqué sur le bouton stop ${button.textContent}`);
+    console.log('stop')
   });
 });

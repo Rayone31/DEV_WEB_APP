@@ -24,7 +24,6 @@ const io = new Server(server, {
   }
 });
 
-// Port du serveur
 const PORT = process.env.PORT || 5000;
 
 // Route API basique pour tester
