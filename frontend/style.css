@@ -1,15 +1,30 @@
 body {
   background-color: orange;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
-.arrow-button-up {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.container > div {
+  display: flex;
+  gap: 10px;
+}
+
+.arrow-button-up,
+.arrow-button-left,
+.arrow-button-right,
+.arrow-button-down,
+.button-stop {
   width: 100px;
   height: 100px;
   background-color: green;
@@ -19,49 +34,37 @@ body {
   border: none;
   cursor: pointer;
   transition: transform 0.1s;
+  font-size: 24px;
 }
 
-.arrow-button-left {
-  width: 100px;
-  height: 100px;
-  background-color: green;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.1s;
-}
-
-.arrow-button-right {
-  width: 100px;
-  height: 100px;
-  background-color: green;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.1s;
-}
-
-.arrow-button-down {
-  width: 100px;
-  height: 100px;
-  background-color: green;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.1s;
-}
-
-.arrow-button:active {
+.arrow-button:active,
+.button-stop:active {
   transform: scale(0.95);
 }
 
 .arrow {
   font-size: 48px;
   color: red;
+}
+
+.stop {
+  font-size: 24px;
+  color: white;
+}
+
+#connect {
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 18px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #222;
 }

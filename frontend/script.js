@@ -1,34 +1,25 @@
 document.querySelectorAll('.arrow-button-up').forEach(button => {
   button.addEventListener('click', () => {
-    alert(`Vous avez cliqué sur la flèche ${button.textContent}`);
-    console.log('avance')
+    window.sendDirection && window.sendDirection('UP');
   });
 });
-
 document.querySelectorAll('.arrow-button-left').forEach(button => {
   button.addEventListener('click', () => {
-    alert(`Vous avez cliqué sur la flèche ${button.textContent}`);
-    console.log('gauche')
+    window.sendDirection && window.sendDirection('LEFT');
   });
 });
-
 document.querySelectorAll('.arrow-button-right').forEach(button => {
   button.addEventListener('click', () => {
-    alert(`Vous avez cliqué sur la flèche ${button.textContent}`);
-    console.log('droite')
+    window.sendDirection && window.sendDirection('RIGHT');
   });
 });
-
 document.querySelectorAll('.arrow-button-down').forEach(button => {
   button.addEventListener('click', () => {
-    alert(`Vous avez cliqué sur la flèche ${button.textContent}`);
-    console.log('recule')
+    window.sendDirection && window.sendDirection('DOWN');
   });
 });
-
 document.querySelectorAll('.button-stop').forEach(button => {
   button.addEventListener('click', () => {
-    alert(`Vous avez cliqué sur le bouton stop ${button.textContent}`);
-    console.log('stop')
+    window.sendDirection && window.sendDirection('STOP');
   });
 });
