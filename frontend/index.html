@@ -3,21 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Contrôle Voiture Bluetooth</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: sans-serif; text-align: center; padding-top: 50px; }
+    .container { display: inline-block; }
+    button { font-size: 2rem; margin: 10px; padding: 20px; border-radius: 10px; }
+    #status, #command { margin-top: 20px; font-weight: bold; }
+  </style>
 </head>
 <body>
   <div class="container">
-    <button class="arrow-button-up"><span class="arrow">↑</span></button>
+    <button class="arrow-button-up">↑</button>
     <div>
-      <button class="arrow-button-left"><span class="arrow">←</span></button>
-      <button class="button-stop"><span class="stop">stop</span></button>
-      <button class="arrow-button-right"><span class="arrow">→</span></button>
+      <button class="arrow-button-left">←</button>
+      <button class="arrow-button-right">→</button>
     </div>
-    <button class="arrow-button-down"><span class="arrow">↓</span></button>
+    <button class="arrow-button-down">↓</button>
   </div>
-  <button id="connect">Connexion Bluetooth</button>
-  <div id="status"></div>
-  <script src="controller.js"></script>
+
+  <div>
+    <button id="connect">🔗 Connexion Bluetooth</button>
+    <div id="status">Non connecté</div>
+    <div id="command">Commande : Aucune</div>
+  </div>
+
+  <script src="connect.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
