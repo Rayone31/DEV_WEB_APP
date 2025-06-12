@@ -1,5 +1,6 @@
 let bluetoothDevice = null;
 let characteristic = null;
+let manualDisconnect = false;
 
 const SERVICE_UUID = '12345678-1234-1234-1234-1234567890ab';
 const CHARACTERISTIC_UUID = '12345678-1234-1234-1234-1234567890ac';
@@ -32,9 +33,29 @@ async function connect() {
 }
 
 function onDisconnected(event) {
-  setStatus('⚠️ Déconnecté, tentative de reconnexion...');
-  reconnect();
+  if (manualDisconnect) {
+    setStatus('Déconnecté du Bluetooth');
+    manualDisconnect = false;
+  } else {
+    setStatus('⚠️ Déconnecté, tentative de reconnexion...');
+    reconnect();
+  }
 }
+
+function disconnectBluetooth() {
+  manualDisconnect = true;
+  console.log("Déconnexion demandée");
+  if (bluetoothDevice && bluetoothDevice.gatt.connected) {
+    bluetoothDevice.gatt.disconnect();
+    setStatus('Déconnecté du Bluetooth');
+    characteristic = null;
+    showCommand('Aucune');
+  } else {
+    setStatus('Déjà déconnecté');
+  }
+}
+
+document.getElementById('disconnect').addEventListener('click', disconnectBluetooth);
 
 async function reconnect() {
   if (!bluetoothDevice) return;
